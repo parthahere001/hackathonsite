@@ -1,0 +1,70 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Inter&display=swap"
+      rel="stylesheet"
+    />
+    <link href="{% static 'descpage.css' %}" rel="stylesheet" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="v1_624">
+      <div class="name"></div>
+      <div class="v1_626">
+        <div class="v1_1293">
+          <div class="v1_627">
+            <div class="v1_628">
+              <img scr="{{ hackathon.hackathon_image.url }}" />
+            </div>
+            <span class="v1_630">{{ hackathon.title }}</span>
+            <div class="v35_502">
+              <div class="v35_510">
+                <div class="v35_511"><div class="v35_512"></div></div>
+                <span class="v35_513">Download file</span>
+              </div>
+            </div>
+          </div>
+          <span class="v1_637">{{ hackathon.tagline }}</span>
+          <div class="v1_1287">
+            <div class="name"></div>
+            <div class="name"></div>
+            <div class="v1_641">
+              <div class="name"></div>
+              <span class="v1_643">12 March</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <span class="v1_651"> {{ hackathon.description }}</span
+      ><span class="v1_652">Description</span>
+      <div class="v1_653">
+        <span class="v1_654">Hackathon</span
+        ><span class="v1_655">{{ hackathon.oragniser }}</span>
+
+        <span class="v1_658" style="margin-top: 30%; margin-left: 10%"
+          >{{ hackathon.startdatetime }} - {{ hackathon.enddatetime }}</span
+        >
+      </div>
+      <div class="v1_659">
+        <div class="v1_660">
+          <div class="v1_661"><div class="v1_662"></div></div>
+          <span class="v1_663">GitHub Repository</span>
+        </div>
+        <div class="v1_664">
+          <div class="name"></div>
+          <span class="v1_666">Other Link</span>
+        </div>
+        <div class="v1_667">
+          <div class="v1_668"><div class="v1_669"></div></div>
+          <span class="v1_670">Download file</span>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

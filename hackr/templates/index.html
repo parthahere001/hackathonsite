@@ -1,0 +1,91 @@
+{% load static %} {# Load the tag library #} {% load bootstrap5 %} {# Load CSS
+and JavaScript #} {% bootstrap_css %} {% bootstrap_javascript %}
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Inter&display=swap"
+      rel="stylesheet"
+    />
+    <link href="{% static 'index.css' %}" rel="stylesheet" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="v1_871">
+      <div class="name"></div>
+      <div class="v1_894">
+        <div class="v1_895"></div>
+        <div class="v1_896">
+          <span class="v1_897">Hackathon Submissions</span
+          ><span class="v1_898"
+            >Lorem ipsum dolor sit amet consectetur. Urna cursus amet
+            pellentesque in parturient purus feugiat faucibus. Congue laoreet
+            duis porta turpis eget suspendisse ac pharetra amet. Vel nisl tempus
+            nec vitae.
+          </span>
+          <div class="name"></div>
+        </div>
+        <div class="v1_900"></div>
+      </div>
+      <div class="v1_902">
+        <div class="v1_906"><span class="v1_907">All Submissions</span></div>
+        <div class="v1_903">
+          <span class="v1_904">Favourite Submissions</span>
+        </div>
+      </div>
+      <div class="v1_949">
+        {% comment %}
+        <div class="v1_941">
+          {% endcomment %}
+          <div class="name"></div>
+          <span class="v1_915">Search</span>
+          {% comment %}
+        </div>
+        {% endcomment %}
+        <div class="v1_942">
+          <span class="v1_944">Newest</span>
+          <div class="name"></div>
+        </div>
+      </div>
+      <div class="column" style="position: relative">
+        {% for hackathon in allhackathons %}
+        <div>
+          <div class="v1_959">
+            <h1 style="font-color: black">
+              <a href="" style="color: black; text-decoration: none"
+                >{{ hackathon.title }}</a
+              >
+            </h1>
+            <img
+              src="{{ hackathon.hackathon_image.url }}"
+              style="
+                width: 100px;
+                height: 100px;
+                background-repeat: no-repeat;
+                background-position: center center;
+                background-size: cover;
+                margin-left: 60%;
+                opacity: 1;
+                position: absolute;
+                top: 35px;
+                left: 24px;
+                overflow: hidden;
+              "
+            />
+            <p style="font-size: 10px; margin-top: 70%">
+              added on {% now "DATE_FORMAT" %}
+            </p>
+            <p></p>
+          </div>
+        </div>
+
+        {% endfor %}
+      </div>
+    </div>
+  </body>
+</html>
