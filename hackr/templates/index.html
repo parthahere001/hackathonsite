@@ -1,5 +1,4 @@
-{% load static %} {# Load the tag library #} {% load bootstrap5 %} {# Load CSS
-and JavaScript #} {% bootstrap_css %} {% bootstrap_javascript %}
+{% load static %}  {% load bootstrap5 %}  {% bootstrap_css %} {% bootstrap_javascript %}
 
 <!DOCTYPE html>
 <html>
@@ -23,11 +22,14 @@ and JavaScript #} {% bootstrap_css %} {% bootstrap_javascript %}
         <div class="v1_896">
           <span class="v1_897">Hackathon Submissions</span
           ><span class="v1_898"
-            >Lorem ipsum dolor sit amet consectetur. Urna cursus amet
-            pellentesque in parturient purus feugiat faucibus. Congue laoreet
-            duis porta turpis eget suspendisse ac pharetra amet. Vel nisl tempus
-            nec vitae.
+            >Hackathons are events that bring together individuals with
+            different skills and backgrounds to collaborate on creating
+            innovative solutions to real-world problems. They play a significant
+            role in fostering creativity, teamwork, and problem-solving skills,
+            making them an essential tool for driving technological progress and
+            promoting entrepreneurship.
           </span>
+
           <div class="name"></div>
         </div>
         <div class="v1_900"></div>
@@ -43,21 +45,56 @@ and JavaScript #} {% bootstrap_css %} {% bootstrap_javascript %}
         <div class="v1_941">
           {% endcomment %}
           <div class="name"></div>
-          <span class="v1_915">Search</span>
+          <a
+            href="addhackathonpage/"
+            style="
+              position: absolute;
+              left: 0px;
+              top: 0px;
+              z-index: 1000000000;
+              text-decoration: none;
+              font-size: large;
+              font-color: black;
+              background-color: orange;
+              font-weight: bold;
+              border: 2px solid black;
+              border-radius: 5px;
+              padding: 3px;
+              color: black;
+            "
+            >Add Hackathon</a
+          ><a
+            href="logout/"
+            style="
+              position: absolute;
+              margin-left: 170px;
+              top: 0px;
+              z-index: 1000000000;
+              text-decoration: none;
+              font-size: large;
+              font-color: black;
+              background-color: grey;
+              font-weight: bold;
+              border: 2px solid black;
+              border-radius: 5px;
+              padding: 3px;
+              color: black;
+            "
+            >Logout</a
+          >
+          <span class="v1_915"></span>
           {% comment %}
         </div>
         {% endcomment %}
-        <div class="v1_942">
-          <span class="v1_944">Newest</span>
-          <div class="name"></div>
-        </div>
       </div>
       <div class="column" style="position: relative">
         {% for hackathon in allhackathons %}
         <div>
           <div class="v1_959">
             <h1 style="font-color: black">
-              <a href="" style="color: black; text-decoration: none"
+              <a
+                href="/getdesc/{{ hackathon.id }}/"
+                style="color: black; text-decoration: none"
                 >{{ hackathon.title }}</a
               >
             </h1>
