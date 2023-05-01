@@ -31,7 +31,9 @@ python3 manage.py runserver
 
 Make sure to have Python (version 3.0.0 or onwards) and Virtual env set up on your local device
 
+### Postgresql
 
+Make sure that your Postgresql server is running on your local device and update your server credientials like DB name, username, password in the settings.py file present in the hackathonsite/hackathonsite/ directory.
 
 ## Built With
 
