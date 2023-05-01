@@ -35,6 +35,11 @@ Make sure to have Python (version 3.0.0 or onwards) and Virtual env set up on yo
 
 Make sure that your Postgresql server is running on your local device and update your server credientials like DB name, username, password in the settings.py file present in the hackathonsite/hackathonsite/ directory.
 
+### Live Site
+
+To checkout a hosted version of the site visit [http://parthahere001.pythonanywhere.com/](http://parthahere001.pythonanywhere.com/)
+
+
 ## Built With
 
 * [Django](https://www.djangoproject.com/) - The web framework used
